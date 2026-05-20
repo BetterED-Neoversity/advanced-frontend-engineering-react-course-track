@@ -1,25 +1,34 @@
-# Заняття 10 — Маршрутизація та HTTP-запити
+# Заняття 11 — Розширена маршрутизація
 
-## Маршрутизація
+## Неіснуючі маршрути
 
-- Вкладені маршрути
-- Динамічні маршрути
-- Динамічні параметри маршруту (`route params`)
-- Типізація `params` у серверному компоненті
-- Хук `useParams` у клієнтському компоненті
-- Програмна навігація з `useRouter`
+- Дефолтна сторінка 404
+- Глобальний `not-found.tsx`
+- Локальний `not-found.tsx` та функція `notFound` з `next/navigation`
 
-## HTTP-запити
+## Вкладені layout для секцій додатка
 
-- Запити в серверних компонентах
-- Індикатор завантаження (`loading.tsx`) та помилки (`error.tsx`)
-- Гібридні запити з `prefetchQuery`
-- Клієнтські запити з React Query
+- `app/auth/layout.tsx` — окремий layout для сторінок авторизації
+- Сторінки `app/auth/login/page.tsx` та `app/auth/register/page.tsx`
 
-## Практика
+```text
+/auth/login    > app/auth/layout.tsx + app/auth/login/page.tsx
+/auth/register > app/auth/layout.tsx + app/auth/register/page.tsx
+```
 
-- API `https://62584f320c918296a49543e7.mockapi.io/tasks`
-- Сервісний файл `lib/task-service.ts` — функції `fetchTasks`, `fetchTaskById`, `deleteTask`
-- Сторінка всіх завдань `app/tasks/page.tsx` — серверний запит
-- Сторінка окремого завдання `app/tasks/[taskId]/page.tsx` — серверний запит по `taskId`
-- Якщо лишається час: створення завдання через форму
+## Програмна навігація з `useRouter`
+
+- Сторінка `app/auth/login/page.tsx` з формою логіну
+- Фейкова авторизація — перевірка email та пароля
+- Редірект на `/profile` після успішного логіну
+
+## Універсальні маршрути (catch-all routes)
+
+- Сторінка `app/shop/[...categories]/page.tsx`
+- Відображення хлібних крихт (breadcrumbs) з масиву `categories`
+
+```text
+/shop/electronics
+/shop/electronics/phones
+/shop/electronics/phones/apple
+```
