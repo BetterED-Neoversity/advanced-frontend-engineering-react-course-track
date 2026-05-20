@@ -52,3 +52,16 @@
 - `components/ClickCounter.tsx` — лічильник, потребує підключення до стора
 - `components/LangSwitcher.tsx` — перемикач мови, потребує підключення до стора
 - `app/page.tsx` — рендерить обидва компоненти
+
+## Послідовність заняття
+
+1. Пояснити навіщо глобальний стан — показати проблему prop drilling
+2. Порівняти альтернативи — чому Zustand для цього курсу
+3. Встановити `zustand` та `immer`
+4. Створити `stores/counter-store.ts` — базовий стор з `counter.value` та `increment`
+5. Підключити стор до `ClickCounter` через селектор
+6. Додати `lang` та `changeLang` до стору
+7. Підключити стор до `LangSwitcher` через селектори
+8. Показати `immer` — порівняти оновлення з `produce` та без
+9. Підключити `persist` middleware — перевірити збереження в `localStorage`
+10. Додати `partialize` — показати вибіркове збереження
