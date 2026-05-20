@@ -1,34 +1,33 @@
-# Заняття 11 — Розширена маршрутизація
+# Заняття 12 — Розширена маршрутизація
 
-## Неіснуючі маршрути
+- Групування маршрутів `(group)`
+  - Організація файлів без впливу на URL
+  - Наприклад `app/(auth)/login/page.tsx` — URL залишається `/login`
+  - Дозволяє мати спільний layout для групи сторінок без додаткового сегменту в URL
+- Паралельні маршрути
+  - Слот `@sidebar` — відображення сайдбара поряд з основним контентом у `/dashboard`
+  - Викладач додає `app/dashboard/@sidebar/page.tsx` та підключає слот у `app/dashboard/layout.tsx`
+- Перехоплення маршрутів
+  - Викладач створює `app/@modal/(.)auth/login/page.tsx` і імпортує `components/LoginModal.tsx`
+  - Викладач створює `app/@modal/(.)gallery/[imageId]/page.tsx` і імпортує `components/ImageModal.tsx`
+  - Слот `@modal` підключається у кореневому `app/layout.tsx`
+  - Клік на Login → модалка поверх поточної сторінки
+  - Клік на зображення в галереї → модалка поверх галереї
+  - Пряме відкриття `/auth/login` або `/gallery/[imageId]` → повна сторінка
 
-- Дефолтна сторінка 404
-- Глобальний `not-found.tsx`
-- Локальний `not-found.tsx` та функція `notFound` з `next/navigation`
-
-## Вкладені layout для секцій додатка
-
-- `app/auth/layout.tsx` — окремий layout для сторінок авторизації
-- Сторінки `app/auth/login/page.tsx` та `app/auth/register/page.tsx`
-
-```text
-/auth/login    > app/auth/layout.tsx + app/auth/login/page.tsx
-/auth/register > app/auth/layout.tsx + app/auth/register/page.tsx
-```
-
-## Програмна навігація з `useRouter`
-
-- Сторінка `app/auth/login/page.tsx` з формою логіну
-- Фейкова авторизація — перевірка email та пароля
-- Редірект на `/profile` після успішного логіну
-
-## Універсальні маршрути (catch-all routes)
-
-- Сторінка `app/shop/[...categories]/page.tsx`
-- Відображення хлібних крихт (breadcrumbs) з масиву `categories`
+## Структура файлів які створює викладач
 
 ```text
-/shop/electronics
-/shop/electronics/phones
-/shop/electronics/phones/apple
+app/dashboard/@sidebar/page.tsx
+app/@modal/(.)auth/login/page.tsx
+app/@modal/(.)gallery/[imageId]/page.tsx
 ```
+
+## Стартові файли у проєкті
+
+- `components/ImageModal.tsx` — базова модалка для галереї
+- `components/LoginModal.tsx` — базова модалка для логіну
+- `app/dashboard/layout.tsx` — layout з місцем для `@sidebar`
+- `app/dashboard/page.tsx` — сторінка dashboard з контентом
+- `app/gallery/page.tsx` — список зображень з Pixabay
+- `app/gallery/[imageId]/page.tsx` — повна сторінка зображення

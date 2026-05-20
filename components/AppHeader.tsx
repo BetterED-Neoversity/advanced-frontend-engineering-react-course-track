@@ -9,16 +9,16 @@ export default function AppHeader() {
             <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/profile">Profile</Link>
+            <Link href="/dashboard">Dashboard</Link>
+          </li>
+          <li>
+            <Link href="/gallery">Gallery</Link>
           </li>
           <li>
             <Link href="/auth/login">Login</Link>
           </li>
           <li>
             <Link href="/auth/register">Register</Link>
-          </li>
-          <li>
-            <Link href="/shop">Shop</Link>
           </li>
         </ul>
       </nav>
