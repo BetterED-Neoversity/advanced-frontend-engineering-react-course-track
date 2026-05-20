@@ -25,19 +25,19 @@ npm run dev
 
 ## Структура гілок
 
-| Гілка                 | Тема                                |
-| --------------------- | ----------------------------------- |
-| `module-01/lesson-01` | Компоненти та стан — Заняття 1      |
-| `module-01/lesson-02` | Компоненти та стан — Заняття 2      |
-| `module-02/lesson-01` | Форми та ефекти — Заняття 1         |
-| `module-02/lesson-02` | Форми та ефекти — Заняття 2         |
-| `module-03/lesson-01` | React Query та Formik — Заняття 1   |
-| `module-03/lesson-02` | React Query та Formik — Заняття 2   |
-| `module-04/lesson-01` | Мутації з React Query — Заняття 1   |
-| `module-04/lesson-02` | Мутації з React Query — Заняття 2   |
-| `module-05/lesson-01` | Вступ до Next.js — Заняття 1        |
-| `module-05/lesson-02` | Вступ до Next.js — Заняття 2        |
-| `module-06/lesson-01` | Розширена маршрутизація — Заняття 1 |
-| `module-06/lesson-02` | Розширена маршрутизація — Заняття 2 |
-| `module-07/lesson-01` | SEO та оптимізація                  |
-| `module-07/lesson-02` | Глобальний стан з Zustand           |
+| Гілка                 | Тема                                                           |
+| --------------------- | -------------------------------------------------------------- |
+| `module-01/lesson-01` | Компоненти та колекції                                         |
+| `module-01/lesson-02` | Події та стан компонента                                       |
+| `module-02/lesson-01` | Форми та HTTP-запити                                           |
+| `module-02/lesson-02` | Побічні ефекти                                                 |
+| `module-03/lesson-01` | TanStack Query                                                 |
+| `module-03/lesson-02` | Форми з Formik                                                 |
+| `module-04/lesson-01` | Мутації з TanStack Query                                       |
+| `module-04/lesson-02` | Контрольовані елементи                                         |
+| `module-05/lesson-01` | Знайомство з Next.js                                           |
+| `module-05/lesson-02` | Маршрутизація та HTTP-запити                                   |
+| `module-06/lesson-01` | Розширена маршрутизація — 404, вкладені layout, catch-all      |
+| `module-06/lesson-02` | Розширена маршрутизація — групування, паралельні, перехоплення |
+| `module-07/lesson-01` | SEO та оптимізація                                             |
+| `module-07/lesson-02` | Глобальний стан з Zustand                                      |
