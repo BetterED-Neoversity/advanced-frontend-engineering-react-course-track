@@ -1,26 +1,54 @@
-# Заняття 13 — SEO та оптимізація
+# Заняття 14 — Глобальний стан з Zustand
 
-## SEO та мета-теги
+## Глобальний стан
 
-- Глобальні мета-теги в `layout.tsx`
-  - `title`
-  - `description`
-- Мета-теги для окремих сторінок
-- Динамічні мета-теги з `generateMetadata`
+- Навіщо потрібен глобальний стан
+- Що зберігають у глобальному стані: авторизація, тема, мова, кошик
+- Чому не завжди достатньо `useState` та `Context`
 
-## Open Graph та Twitter мета-теги
+## Zustand
 
-- Перевірка з [socialsharepreview.com](https://socialsharepreview.com/)
-- `title`, `description`, `type`, `url`, `siteName`
-- [opengraph-image](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/opengraph-image)
+- Що таке Zustand і чому він простіший за альтернативи
+  - Redux Toolkit — потужний але складний, багато бойлерплейту
+  - Jotai — атомарний підхід, інша філософія
+  - Recoil — схожий на Jotai, від Meta
+- Створення стору через `create`
+- Типізація стору
+- Селектори для читання стану з компонентів
 
-## Sitemap та robots
+## Immer
 
-- [`sitemap.ts`](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap)
-- [`robots.ts`](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/robots)
+- Навіщо `immer` — зручне оновлення вкладеного стану без спредів
+- `produce` — мутуємо стан напряму, `immer` повертає новий об'єкт
 
-## Оптимізація ресурсів
+## Persist middleware
 
-- Шрифти через `next/font`
-- Зображення з `next/image`
-- Lighthouse — перевірка результату
+- Збереження стану в `localStorage`
+- `partialize` — вибіркове збереження окремих частин стану
+
+## Завдання
+
+Створити файл `stores/counter-store.ts` зі стором який містить:
+
+**Стан:**
+
+- `counter.value` — лічильник (число)
+- `lang` — мова додатка (`"en" | "uk" | "pl"`)
+
+**Дії:**
+
+- `increment` — збільшує `counter.value` на 1
+- `changeLang` — змінює мову
+
+**Вимоги:**
+
+- Типізувати стор
+- Використати `immer` для оновлення стану
+- Підключити `persist` middleware — зберігати `counter.value` та `lang` в `localStorage`
+- Додати селектори для читання стану в компонентах
+
+## Стартові файли у проєкті
+
+- `components/ClickCounter.tsx` — лічильник, потребує підключення до стора
+- `components/LangSwitcher.tsx` — перемикач мови, потребує підключення до стора
+- `app/page.tsx` — рендерить обидва компоненти
