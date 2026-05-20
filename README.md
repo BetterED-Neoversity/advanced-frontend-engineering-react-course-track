@@ -31,3 +31,15 @@ app/@modal/(.)gallery/[imageId]/page.tsx
 - `app/dashboard/page.tsx` — сторінка dashboard з контентом
 - `app/gallery/page.tsx` — список зображень з Pixabay
 - `app/gallery/[imageId]/page.tsx` — повна сторінка зображення
+
+## Послідовність заняття
+
+1. Показати групування маршрутів `(group)` — пояснити що не впливає на URL
+2. Створити `app/dashboard/@sidebar/page.tsx` — показати паралельні маршрути
+3. Підключити слот `@sidebar` у `app/dashboard/layout.tsx`
+4. Пояснити концепцію перехоплення маршрутів — коли і навіщо
+5. Підключити слот `@modal` у кореневому `app/layout.tsx`
+6. Створити `app/@modal/(.)auth/login/page.tsx` — імпортувати `LoginModal`
+7. Показати що прямий перехід на `/auth/login` відкриває повну сторінку
+8. Створити `app/@modal/(.)gallery/[imageId]/page.tsx` — імпортувати `ImageModal`
+9. Показати що прямий перехід на `/gallery/[imageId]` відкриває повну сторінку
