@@ -18,7 +18,25 @@
 - Компонент `ErrorMessage`
   - Пропс `component`
 
+## Стартові файли у проєкті
+
+- `src/components/OrderForm.tsx` — базова форма з полями `username` та `email`, потребує підключення Formik
+
+## Послідовність заняття
+
+1. Підключити `Formik` та `Form` до `OrderForm` — додати `initialValues` та `onSubmit`
+2. Замінити `input` на `Field` — пояснити атрибут `name`
+3. Типізувати `initialValues`
+4. Показати `values` та `actions` у `onSubmit`
+5. Додати решту полів форми з повної розмітки — radio, checkbox, select, textarea
+6. Показати типи полів через пропс `as`
+7. Показати Render Prop для доступу до властивостей Formik у JSX
+8. Додати валідацію через `Yup` — схема, `validationSchema`
+9. Додати `ErrorMessage` для відображення помилок
+
 ## Повна форма
+
+Розмітка всіх полів для копіювання під час заняття:
 
 ```tsx
 export default function OrderForm() {
