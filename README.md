@@ -1,2 +1,25 @@
-# advanced-frontend-engineering-react-course-track
-Трек занять для викладача дисципліни Advanced Front-End Engineering with React (магістратура)
+# Заняття 10 — Маршрутизація та HTTP-запити
+
+## Маршрутизація
+
+- Вкладені маршрути
+- Динамічні маршрути
+- Динамічні параметри маршруту (`route params`)
+- Типізація `params` у серверному компоненті
+- Хук `useParams` у клієнтському компоненті
+- Програмна навігація з `useRouter`
+
+## HTTP-запити
+
+- Запити в серверних компонентах
+- Індикатор завантаження (`loading.tsx`) та помилки (`error.tsx`)
+- Гібридні запити з `prefetchQuery`
+- Клієнтські запити з React Query
+
+## Практика
+
+- API `https://62584f320c918296a49543e7.mockapi.io/tasks`
+- Сервісний файл `lib/task-service.ts` — функції `fetchTasks`, `fetchTaskById`, `deleteTask`
+- Сторінка всіх завдань `app/tasks/page.tsx` — серверний запит
+- Сторінка окремого завдання `app/tasks/[taskId]/page.tsx` — серверний запит по `taskId`
+- Якщо лишається час: створення завдання через форму
