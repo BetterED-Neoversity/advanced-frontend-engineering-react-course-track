@@ -1,5 +1,7 @@
 # Заняття 10 — Маршрутизація та HTTP-запити
 
+> Це заняття використовує локальний REST API через `json-server`. Перед початком запусти `npm run server` — API буде доступне на `http://localhost:3001/tasks`.
+
 ## Маршрутизація
 
 - Вкладені маршрути
@@ -18,7 +20,7 @@
 
 ## Практика
 
-- API `https://62584f320c918296a49543e7.mockapi.io/tasks`
+- API `http://localhost:3001/tasks`
 - Сервісний файл `lib/task-service.ts` — функції `fetchTasks`, `fetchTaskById`, `deleteTask`
 - Сторінка всіх завдань `app/tasks/page.tsx` — серверний запит
 - Сторінка окремого завдання `app/tasks/[taskId]/page.tsx` — серверний запит по `taskId`
@@ -27,6 +29,7 @@
 ## Стартові файли у проєкті
 
 - `lib/task-service.ts` — готовий сервіс з функціями `fetchTasks`, `fetchTaskById`, `deleteTask` та типом `Task`
+- `db.json` — локальна база даних з тестовими завданнями
 
 ## Послідовність заняття
 
