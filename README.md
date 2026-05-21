@@ -1,5 +1,7 @@
 # Заняття 8 — Контрольовані елементи
 
+> Це заняття використовує локальний REST API через `json-server`. Перед початком запусти `npm run server` — API буде доступне на `http://localhost:3001/tasks`.
+
 - Контрольовані елементи
   - Атрибути `value` та `onChange`
 - Компоненти `SearchBox` та `SortFilter`
@@ -17,6 +19,7 @@
 - `src/components/TaskForm/TaskForm.tsx` — готовий з мутацією створення
 - `src/services/taskService.ts` — готовий, потребує додавання параметрів пошуку та сортування до `getTasks`
 - `src/types/task.ts` — готові типи
+- `db.json` — локальна база даних з тестовими завданнями
 
 ## Послідовність заняття
 
