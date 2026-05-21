@@ -9,7 +9,7 @@ export interface Task {
 
 export const fetchTasks = async (searchText: string): Promise<Task[]> => {
   const res = await axios.get<Task[]>(
-    "https://62584f320c918296a49543e7.mockapi.io/tasks",
+    "http://localhost:3001/tasks",
     {
       params: {
         search: searchText,
@@ -21,14 +21,14 @@ export const fetchTasks = async (searchText: string): Promise<Task[]> => {
 
 export const deleteTask = async (taskId: string): Promise<Task> => {
   const res = await axios.delete<Task>(
-    `https://62584f320c918296a49543e7.mockapi.io/tasks/${taskId}`,
+    `http://localhost:3001/tasks/${taskId}`,
   );
   return res.data;
 };
 
 export const fetchTaskById = async (taskId: string): Promise<Task> => {
   const res = await axios.get<Task>(
-    `https://62584f320c918296a49543e7.mockapi.io/tasks/${taskId}`,
+    `http://localhost:3001/tasks/${taskId}`,
   );
   return res.data;
 };
